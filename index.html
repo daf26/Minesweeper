@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Minesweeper</title>
+</head>
+<h1>Mines weeper</h1>
+
+<body onload="initGame()">
+    <div class="radio-btns">
+        <input type="radio" id="beginner" name="level" data-idx="0" onclick="chooseLevel(this)" checked>
+        <label for="beginner">Beginner</label>
+        <input type="radio" id="medium" name="level" data-idx="1" onclick="chooseLevel(this)">
+        <label for="medium">Medium</label>
+        <input type="radio" id="expert" name="level" data-idx="2" onclick="chooseLevel(this)">
+        <label for="expert">Expert</label>
+    </div>
+    <h3>time: <span id="time">000</span> <span id="smiley"></span>| remaining flags: <span id="flags"></span> | lives: <span id="lives"></span></h3>
+    <div class="board-container"></div>
+
+    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+<!-- oncontextmenu="return false;" -->
