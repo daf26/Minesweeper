@@ -1,14 +1,36 @@
+body {
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(224, 255, 255);
+}
+
 .board-container td {
     width: 40px;
     height: 40px;
     text-align: center;
     font-size: 1.4em;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+table {
+    border: none;
+    margin: 0 auto;
+    position: relative;
 }
 
 .selected {
-    background-color: aqua;
+    background-color: rgb(7, 161, 161);
 }
 
 .selected-mine {
     background-color: red;
+}
+
+.hints {
+    height: 60px;
 }

@@ -1,6 +1,5 @@
 'use strict';
 
-
 var gStartTime;
 var gElapsedTime = 0;
 var gTimerInterval;
@@ -75,9 +74,22 @@ function timeToString(time) {
     return formattedSec;
 }
 
-// location such as: {i: 2, j: 7}
-// function renderCell(location, value) {
-//     // Select the elCell and set the value
-//     var elCell = document.querySelector(`#cell-${location.i}-${location.j}`);
-//     elCell.innerText = value;
-// }
+function renderHints() {
+    var strHTML = '<h1>';
+    for (var i = 0; i < gHintsCount; i++) {
+        strHTML += `<span id="hint${i+1}" onclick="toggleHint(this)">${HINT}</span>`;
+    }
+    strHTML += '</h1>';
+    document.querySelector('.hints').innerHTML = strHTML;
+}
+
+
+function toggleHint(elHint) {
+    if (gGame.isHintOn) {
+        gGame.isHintOn = false;
+        elHint.innerHTML = HINT;
+    } else {
+        gGame.isHintOn = true;
+        elHint.innerHTML = HINT_REVEAL;
+    }
+}
