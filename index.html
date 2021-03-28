@@ -21,12 +21,13 @@
     </div>
     <h3>time: <span id="time">000</span> | remaining flags: <span id="flags"></span> | lives: <span id="lives"></span></h3>
     <h3>best time: <span id="best-time"></span></h3>
-    <!-- <div class="smiley"></div> -->
     <h1><span class="smiley" onclick="initGame(gLevel)"></span></h1>
-    <div class="hints">
-        <!-- <h1><span id="hint1" onclick="toggleHint(this)">📘</span>
-            <span id="hint2" onclick="toggleHint(this)">📘</span>
-            <span id="hint3" onclick="toggleHint(this)">📘</span></h1> -->
+    <div class="hints"></div>
+    <button onclick="safeClick()">Safe Click | <span id="safe-clicks"></span> click(s) available</button>
+    <div class="manual">
+        <button id="manually-create" onclick="manuallyCreate()">Manually Create</button>
+        <button hidden id="manually-play" onclick="playManual()">Play</button>
+        <h4 hidden><span id="mines"></span> mines to place</h4>
     </div>
     <div class="board-container"></div>
 

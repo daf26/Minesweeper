@@ -85,6 +85,7 @@ function renderHints() {
 
 
 function toggleHint(elHint) {
+    if (gGame.isManual) return;
     if (gGame.isHintOn) {
         gGame.isHintOn = false;
         elHint.innerHTML = HINT;

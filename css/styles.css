@@ -19,7 +19,7 @@ body {
 
 table {
     border: none;
-    margin: 0 auto;
+    margin: 20px auto;
     position: relative;
 }
 
@@ -28,9 +28,40 @@ table {
 }
 
 .selected-mine {
-    background-color: red;
+    background-color: rgb(255, 196, 0);
 }
 
 .hints {
     height: 60px;
+}
+
+.safe {
+    background-color: rgb(73, 211, 211);
+}
+
+button {
+    background-color: rgb(255, 196, 0);
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 15px;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+.manual {
+    height: 90px;
+}
+
+.container h3 {
+    display: inline;
+}
+
+.container h1 {
+    display: inline;
+    margin: 0 20px;
+}
+
+.container .hints {
+    display: inline;
 }
